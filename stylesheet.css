@@ -49,10 +49,45 @@ table {
 
 /*----------------------------------------------------------------*/
 /*-------------------------KATS MEOW------------------------------*/
+body {
+	font-family: 'Raleway', arial, sans-serif;
+	background-color: #5AC6FF;
+	color: #ffffff;
+}
+
+header {
+	margin: 10px auto;
+	height: 100px;
+	width: 320px;
+}
+
+.icon-sun {
+	font-size: 3em;
+	color: #FFE4A3;
+}
+
+article {
+	margin-top: 90px;
+	height: 80px;
+}
+
 h1 {
-	font-size: 2em;
+	font-size: 3.5em;
 	text-align: center;
 	margin: 20px 0px 75px 0px;
+}
+
+p {
+	font-size: 1.5em;
+	margin-bottom: 15px;
+}
+
+.hot {
+	color: #FFC744;
+}
+
+.cold {
+	color: #4E1B75
 }
 
 form {
@@ -63,10 +98,29 @@ form {
 
 input {
 	height: 50px;
-	margin: 10px;
+	margin: 15px;
 }
 
-input[type=button] {
+input[type=text] {
+	height: 80px;
+	width: 80px;
+	font-size: 1.5em;
+}
+
+input[type=text]:active, input[type=text]:focus {
+	border: 2px solid #FFC744;
+}
+
+input[type=submit] {
 	font-size: 1.25em;
-	background-color: blue;
+	background-color: #4E1B75;
+	color: #ffffff;
+	width: 100px;
+	border: none;
+	border-radius: 8px;
+}
+
+input[type=submit]:hover {
+	background-color: #9F37EE;
+	cursor: pointer;
 }

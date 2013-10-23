@@ -8,7 +8,8 @@ $(document).ready(function() {
 	//var guess = prompt("Pick a number between 1 and 100" + "");
 	//console.log(guess);
 	function guessnumber() {
-		var guess = document.forms['HotCold'].answer.value;
+		var guess = document.forms['HotCold'].guessbox.value;
+		console.log(guess);
 
 	//Validate player guess as proper value
 
@@ -21,11 +22,15 @@ $(document).ready(function() {
 			var newGuess = prompt("too low, try again" + "");
 		} else {
 			var newGuess = prompt("too high, try again" + "");
-		};
+		}
 		console.log(newGuess);
-	}
 
-	//Check difference of original and new guesses to the answer
+});
+
+
+$('#yourid').val();
+
+//Check difference of original and new guesses to the answer
 	function differenceOriginal(answer, newGuess) { 
 		return Math.abs(answer - newGuess);
 	}
@@ -76,8 +81,6 @@ $(document).ready(function() {
 	}
 
 });
-
-
-
+*/
 
 

@@ -3,18 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+	<link href='css/font-awesome.css' rel='stylesheet' type='text/css'/>
 	<title>Get Warmer</title>
 </head>
 <body>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="hotcold.js"></script>
 	<header>
-		<h1>Hot or Cold Game</h1>
+		<h1><i class="icon-sun"></i><h1>
 	</header>
+	<article>
+		<h1>Are you <span class="hot">HOT</span> or <span class="cold">COLD</span>?</h1>
+	</article>
 	<form name="HotCold">
-		<p>Pick a number between 1 and 100.</p>
-		<input type="text" size=10 maxlength=3 name="answer"><br>
-		<input type="button" onClick="guessnumber();" value="submit">
+		<p>Select a number between 1 and 100:</p>
+		<input type="text" name="guessbox" maxlength="3"><br>
+		<input type="submit" name="submit" value="GUESS">
+		<input type="submit" name="replay" value="REPLAY">
 	</form>
 
 </body>
