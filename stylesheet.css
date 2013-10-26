@@ -53,28 +53,39 @@ body {
 	font-family: 'Raleway', arial, sans-serif;
 	background-color: #5AC6FF;
 	color: #ffffff;
+	text-align: center;
 }
 
 header {
-	margin: 10px auto;
-	height: 100px;
+	position: relative;
+	margin: auto;
 	width: 320px;
 }
 
-.icon-sun {
-	font-size: 3em;
-	color: #FFE4A3;
+.hide {
+	display: none;
+}
+
+.sunstart {
+	margin: 10px auto 0px;
+}
+
+.show {
+	position: absolute;
+	left: 105px;
+	bottom: 50px;
+	font-size: 1.2em;
+	line-height: 1.15;
+	color: #ffffff;
+	font-weight: bold;
 }
 
 article {
-	margin-top: 90px;
-	height: 80px;
+	height: 70px;
 }
 
 h1 {
 	font-size: 3.5em;
-	text-align: center;
-	margin: 20px 0px 75px 0px;
 }
 
 p {
@@ -83,11 +94,11 @@ p {
 }
 
 .hot {
-	color: #FFC744;
+	color: #E67E22;
 }
 
 .cold {
-	color: #4E1B75
+	color: #4E1B75;
 }
 
 form {
@@ -98,20 +109,22 @@ form {
 
 input {
 	height: 50px;
-	margin: 15px;
+	margin: 10px;
 }
 
 input[type=text] {
-	height: 80px;
-	width: 80px;
-	font-size: 1.5em;
+	height: 100px;
+	width: 100px;
+	color: #4E1B75;
+	font-size: 2em;
+	text-align: center;
 }
 
 input[type=text]:active, input[type=text]:focus {
 	border: 2px solid #FFC744;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
 	font-size: 1.25em;
 	background-color: #4E1B75;
 	color: #ffffff;
@@ -120,7 +133,10 @@ input[type=submit] {
 	border-radius: 8px;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, input[type=button]:hover {
 	background-color: #9F37EE;
 	cursor: pointer;
 }
+
+
+/*yellow: #FFC744;*/
