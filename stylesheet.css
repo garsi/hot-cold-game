@@ -93,6 +93,12 @@ p {
 	margin-bottom: 15px;
 }
 
+.error {
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #E67E22;
+}
+
 .hot {
 	color: #E67E22;
 }

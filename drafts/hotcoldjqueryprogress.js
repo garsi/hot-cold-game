@@ -8,59 +8,40 @@ $(document).ready(function() {
 	function startGame() {
 		$("#submit").click(function() {  
 		var guess = $('#playerguess').val();
-			window.guess = guess;
-			validateGuess();
+			console.log(guess + " is the original guess")
+	//var guess = prompt("Pick a number between 1 and 100" + "");
+		window.guess = guess;
+		guessInitial();
 		});
 	}
 	startGame();
 
-	//Validate player guess as proper value
-	function validateGuess() {
-		if(guess < 1 || guess > 100 || isNaN(guess)) {	
-    	$('.error').removeClass('hide');
+
+	//???Validate player guess as proper value
+	/*if(guess == NaN || guess == null || guess < 1 || guess > 100) {	
+    	var guess = prompt("Try that again. Please enter a number between 1 and 100" + "");
 	  } else {
-	  	console.log("Guess submission is valid: " + guess + " is the original guess");
-	  	$('.error').addClass('hide');
-	  	guessInitial();
-	  }
-	}
+	  	console.log("Guess submission is valid");
+	  }*/
+
 
 	//Check if player guess it too high or too low
 	function guessInitial() {
 		if(guess == answer){
-			$('.sunstart').addClass('hide');
-			$('.suncold').addClass('hide');
-			$('.sunwarm').addClass('hide');
-			$('.sunwin').removeClass('hide');
+			confirm("Hey hot stuff, you win!");
 		} else if(guess < answer) {
-			var newGuess = $('#playerguess').val();
-			$('.sunstart').addClass('hide');
-			$('.sunwarm').addClass('hide');
-			$('.suncold').removeClass('hide');
+			confirm("too low, try again");
+			var newGuess = $('#playerguess').val(); 
 		} else {
-			var newGuess = $('#playerguess').val();
-			$('.sunstart').addClass('hide');
-			$('.suncold').addClass('hide');
-			$('.sunwarm').removeClass('hide');
+			confirm("too high, try again");
+			var newGuess = $('#playerguess').val(); 
 		}
 		console.log(newGuess + " is the new guess");
 		window.newGuess = newGuess;
 		}
-
-	//Restart the game with the replay button
-	function replay() {
-		$("#replay").click(function() {
-			$('.sunstart').removeClass('hide');
-			$('.sunwin').addClass('hide');
-		var guess = $('#playerguess').val();
-			window.guess = guess;
-			validateGuess();
-		});
-	}
-	replay();
 	
 
-	/*//Check distance original and new guesses to the answer
+	//Check distance original and new guesses to the answer
 	var distanceOrigin = Math.abs(guess-answer);
 		console.log(distanceOrigin + " is original guess distance");
 	
@@ -93,6 +74,6 @@ $(document).ready(function() {
 
 	}
 
-	confirm("you win!");*/
+	confirm("you win!");
 
 });
