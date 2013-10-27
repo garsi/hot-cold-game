@@ -50,11 +50,14 @@ $(document).ready(function() {
 	//Restart the game with the replay button
 	function replay() {
 		$("#replay").click(function() {
-			$('.sunstart').removeClass('hide');
 			$('.sunwin').addClass('hide');
-		var guess = $('#playerguess').val();
+			$('.suncold').addClass('hide');
+			$('.sunwarm').addClass('hide');
+			$('.sunstart').removeClass('hide');
+			$('.playagain').removeClass('hide');
+		/*var guess = $('#playerguess').val();
 			window.guess = guess;
-			validateGuess();
+			validateGuess();*/
 		});
 	}
 	replay();
