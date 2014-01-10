@@ -3,54 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-	<link href='css/font-awesome.css' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 	<title>Get Warmer</title>
 </head>
 <body>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="hotcold.js"></script>
 	<header>
-		<div class="sunstart">
-			<img src="images/sunset.png" alt="Welcome Sunshine">
-		<div class="show">
-			<p class="playagain hide">Enter<br>a new<br>GUESS</p>
-		</div>
-		</div>
-
-		<div class="suncold hide">
-			<img src="images/suncold.png" alt="Getting Colder">
-		<div class="show">
-			<p>Too low!<br>GUESS<br>again</p>
-		</div>
-		</div>
-
-		<div class="sunwarm hide">
-			<img src="images/sunwarm.png" alt="Getting Warmer">
-		<div class="show">
-			<p>Too high!<br>GUESS<br>try again</p>
-		</div>
-		</div>
-
-		<div class="sunwin hide">
-			<img src="images/sunwin.png" alt="Winning">
-		<div class="show">
-			<p>WINNER<br>You<br>got it!</p>
-		</div>
-		</div>
-
+		<h1>Are you <span class="hottext">HOT</span> or <span class="coldtext">COLD</span>?</h1>
 	</header>
-	<article>
-		<h1>Are you <span class="hot">HOT</span> or <span class="cold">COLD</span>?</h1>
-	</article>
-	<form name="HotCold">
-		<p>Select a number between 1 and 100:</p>
-		<p class="error hide">Try that again!<br>Enter a number between 1 and 100:</p>
-		<input type="text" name="playerguess" id="playerguess" maxlength="3"><br>
-		<input type="button" name="submit" id="submit" value="GUESS">
-		<input type="button" name="replay" id="replay" value="REPLAY">
-	</form>
-	<p id="showclass"></p>
+	<main>
+		<section>
+			<p class="icon-sun"></p>
+		</section>
+		<section>
+			<form name="HotCold">
+				<p id="hint">Select a number<br>between 1 and 100:</p>
+				<p class="error hide">Please try again<br>Enter a number between 1 and 100:</p>
+				<input type="text" name="playerguess" id="playerguess" maxlength="3"><br>
+				<input type="button" name="submit" id="submit" value="guess">
+				<input type="button" name="replay" id="replay" value="replay" disabled>
+			</form>
+		</section>
+	</main>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="hotcold.js"></script>
 </body>
 </html>
